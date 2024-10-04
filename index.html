@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description"
+        content="PRompt Optimization in Multi-Step Tasks (PROMST): Integrating Human Feedback and Preference Alignment">
+  <meta name="keywords" content="prompt optimization, natural language processing, Large Language Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PRompt Optimization in Multi-Step Tasks (PROMST): Integrating Human Feedback and Preference Alignment</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="icon" href="./static/images/favicon.png">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+  
+  <style>
+    .simulation-image {
+      height: 340px;
+      width: 500px;
+    }
+  </style>
+  
+  <style>
+    .table-image {
+      height: 260px;
+      width: 500px;
+    }
+  </style>
+  
+  <style>
+    .abstract-content {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+  </style>
+</head>
+<body>
+
+<nav class="navbar" role="navigation" aria-label="main navigation">
+  <div class="navbar-brand">
+    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+      <span aria-hidden="true"></span>
+    </a>
+  </div>
+  <div class="navbar-menu">
+    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
+      <a class="navbar-item" href="https://keunhong.com">
+      <span class="icon">
+          <i class="fas fa-home"></i>
+      </span>
+      </a>
+
+      <div class="navbar-item has-dropdown is-hoverable">
+        <a class="navbar-link">
+          More Research
+        </a>
+        <div class="navbar-dropdown">
+          <a class="navbar-item" href="https://realm.mit.edu">
+            REALM Website
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</nav>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">PRompt Optimization in Multi-Step Tasks (PROMST): Integrating Human Feedback and Preference Alignment</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://yongchao98.github.io/YongchaoChen/">Yongchao Chen</a>,</span>
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=US8n_rwAAAAJ&hl=en">Jacob Arkin</a>,</span>
+            <span class="author-block">
+              <a href="https://yih301.github.io">Yilun Hao</a>,</span>
+            <span class="author-block">
+              <a href="https://mitibmwatsonailab.mit.edu/people/yang-zhang/">Yang Zhang</a>,
+            </span>
+            <span class="author-block">
+              <a href="https://aeroastro.mit.edu/people/nicholas-roy/">Nicholas Roy</a>,
+            </span>
+            <span class="author-block">
+              <a href="http://chuchu.mit.edu">Chuchu Fan</a>
+            </span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">MIT, Harvard, MIT-IBM Watson AI Lab</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2402.08702"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- Website Link. -->
+              <span class="link-block">
+                <a href="https://yongchao98.github.io/MIT-REALM-PROMST/"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-link"></i>
+                  </span>
+                  <span>Website</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/yongchao98/PROMST"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code and Dataset</span>
+                  </a>
+              </span>
+              <!-- Prompt slides Link. -->
+              <span class="link-block">
+                <a href="https://docs.google.com/presentation/d/1XhxnboJSRgmLAhS9RPUjU8AJSTyPDHKj/edit?usp=share_link&ouid=116887368755709301869&rtpof=true&sd=true"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-github"></i>
+                  </span>
+                  <span>Initial and Optimized Prompts</span>
+                  </a>
+              </span>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/Framework.png"
+        class="center-image"
+        alt=""/>
+      <h2 class="subtitle has-text-centered" style="color: red;">
+        <br/>
+        We introduce an automatic prompt optimization framework for complex, multi-step agent tasks: PROMST. To handle the issues of task complexity, judging long-horizon correctness of individual actions, high prompt exploration cost, and human preference alignment, we propose the integration of human feedback, a learned score prediction model, and the modification of task score functions. Our approach generally outperforms representative baselines on eight different task environments. We show that learning a score prediction model improves the overall performance. Finally, we argue that modifying score functions can help align to optimized prompts to user preferences.
+        </h2>     
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified abstract-content">
+          <p>
+           Prompt optimization aims to find the best prompt to a large language model (LLM) for a given task. LLMs have been successfully used to help find and improve prompt candidates for single-step tasks. However, realistic tasks for agents are multi-step and introduce new challenges: (1) Prompt content is likely to be more extensive and complex, making it more difficult for LLMs to analyze errors, (2) the impact of an individual step is difficult to evaluate, and (3) different people may have varied preferences about task execution. While humans struggle to optimize prompts, they are good at providing feedback about LLM outputs; we therefore introduce a new LLM-driven discrete prompt optimization framework that incorporates human-designed feedback rules about potential errors to automatically offer direct suggestions for improvement. 
+          </p>
+          <p>
+           Our framework is stylized as a genetic algorithm in which an LLM generates new candidate prompts from a parent prompt and its associated feedback; we use a learned heuristic function that predicts prompt performance to efficiently sample from these candidates. This approach significantly outperforms both human-engineered prompts and several other prompt optimization methods across eight representative multi-step tasks (an average 27.7% and 28.2% improvement to current best methods on GPT-3.5 and GPT-4, respectively). We further show that the score function for tasks can be modified to better align with individual preferences. We believe our work can serve as a benchmark for automatic prompt optimization for LLM-driven multi-step tasks.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--/ Abstract. -->
+  </div>
+</section>
+
+<section class="Table1">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/table1.jpg"
+        class="center-image"
+        alt=""/> 
+    </div>
+  </div>
+</section>
+
+<section class="Full prompt part1">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/Score-model.png"
+        class="center-image"
+        alt=""/> 
+        <h2 class="subtitle has-text-centered" style="color: red;">
+        <br/>
+        The training of score models. Here we use BoxLift task as an example. The score model is targeted to predict the score of the input prompt for one specific task.
+        </h2>     
+    </div>
+  </div>
+</section>
+
+<section class="Full prompt part2">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="./static/images/Preference-align.png"
+        class="center-image"
+        alt=""/> 
+        <h2 class="subtitle has-text-centered" style="color: red;">
+        <br/>
+        Human preference alignment via tuning score functions.
+        </h2>     
+    </div>
+  </div>
+</section>
+  
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Related Links</h2>
+    <div class="content has-text-justified">
+      <p>
+        This paper presents work whose goal is to advance the field of Automatic Prompt Tuning. The focus topic on multi-step agent tasks will advance the research in Foundation Model based Intelligent Agents. This work is also part of a broader research thread around <emph>language-instructed task and motion planning</emph>, which allows us to transform from natural language instruction into robot control signals.
+      </p>
+      <p>
+        Other work on Large Language Models for automatic prompt optimization include:
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2305.03495.pdf">Automatic Prompt Optimization with “Gradient Descent” and Beam Search (EMNLP'2023)</a>.</li>
+          <li><a href="https://arxiv.org/pdf/2211.01910.pdf?trk=public_post_comment-text">LARGE LANGUAGE MODELS ARE HUMAN-LEVEL PROMPT ENGINEERS (ICLR'2023)</a>.</li>
+        </ul>
+      </p>
+      <p>
+        Other work on Large Language Models to Robot Task and Motion Planning and LLM-based agents from our lab include:
+        <ul>
+          <li><a href="https://arxiv.org/pdf/2305.07766.pdf">NL2TL: Transforming Natural Languages to Temporal Logics using Large Language Models (EMNLP'2023)</a>.</li>
+          <li><a href="https://arxiv.org/pdf/2306.06531.pdf">AutoTAMP: Autoregressive Task and Motion Planning with LLMs as Translators and Checkers (ICRA'2024)</a>.</li>
+          <li><a href="https://arxiv.org/abs/2309.15943.pdf">Scalable Multi-Robot Collaboration with Large Language Models: Centralized or Decentralized Systems? (ICRA'2024)</a>.</li>
+        </ul>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+    <pre><code>@article{chen2024prompt,
+  title={Prompt optimization in multi-step tasks (promst): Integrating human feedback and preference alignment},
+  author={Chen, Yongchao and Arkin, Jacob and Hao, Yilun and Zhang, Yang and Roy, Nicholas and Fan, Chuchu},
+  journal={arXiv preprint arXiv:2402.08702},
+  year={2024}
+}
+</code></pre>
+  </div>
+</section>
+  
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+    </div>
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content">
+          <p>
+            This website is licensed under a <a rel="license"
+                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+            Commons Attribution-ShareAlike 4.0 International License</a>.
+            This webpage template is from <a href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>. 
+            We sincerely thank <a href="https://keunhong.com/">Keunhong Park</a> for developing and open-sourcing this template.
+          </p>
+        </div>
+      </div>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
