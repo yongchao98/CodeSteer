@@ -156,7 +156,7 @@
         alt=""/>
       <h2 class="subtitle has-text-centered" style="color: red;">
         <br/>
-        We introduce an automatic prompt optimization framework for complex, multi-step agent tasks: PROMST. To handle the issues of task complexity, judging long-horizon correctness of individual actions, high prompt exploration cost, and human preference alignment, we propose the integration of human feedback, a learned score prediction model, and the modification of task score functions. Our approach generally outperforms representative baselines on eight different task environments. We show that learning a score prediction model improves the overall performance. Finally, we argue that modifying score functions can help align to optimized prompts to user preferences.
+        GPT-4o makes simple mistakes by direct textual reasoning but can reliably solve the problem with prompted to use code. Our research highlights the limitations of textual reasoning in LLMs for tasks involving math, logic, and optimization, where code generation offers a more scalable solution. Despite advances like OpenAI's GPT Code Interpreter and AutoGen, no optimal method exists to reliably steer LLMs between code and text generation. This study identifies key patterns in how LLMs choose between code and text with various factors and proposes three methods to improve steering.
         </h2>     
     </div>
   </div>
@@ -209,7 +209,7 @@
         class="center-image"
         alt=""/> 
         <p>
-        The training of score models. Here we use BoxLift task as an example. The score model is targeted to predict the score of the input prompt for one specific task.
+        Inverse scaling law of model sizes and evolution with task complexity.
         </p>     
     </div>
   </div>
@@ -233,7 +233,7 @@
         alt=""/> 
         <h2 class="subtitle has-text-centered" style="color: red;">
         <br/>
-        Human preference alignment via tuning score functions.
+        Requiring LLMs to answer with code is not always effective.
         </h2>     
     </div>
   </div>
@@ -244,11 +244,7 @@
     <div class="hero-body">
       <img src="./Webpage/table1-three-llm.png"
         class="center-image"
-        alt=""/> 
-        <h2 class="subtitle has-text-centered" style="color: red;">
-        <br/>
-        Human preference alignment via tuning score functions.
-        </h2>     
+        alt=""/>    
     </div>
   </div>
 </section>
@@ -258,11 +254,7 @@
     <div class="hero-body">
       <img src="./Webpage/table2-gather-6llm.png"
         class="center-image"
-        alt=""/> 
-        <h2 class="subtitle has-text-centered" style="color: red;">
-        <br/>
-        Human preference alignment via tuning score functions.
-        </h2>     
+        alt=""/>  
     </div>
   </div>
 </section>
@@ -274,7 +266,7 @@
         class="center-image"
         alt=""/> 
         <p>
-        The training of score models. Here we use BoxLift task as an example. The score model is targeted to predict the score of the input prompt for one specific task.
+        Multi-turn execution/self-refinement can improve the performance, but depends on the task complexity and LLM capability.
         </p>     
     </div>
   </div>
@@ -287,7 +279,7 @@
         class="center-image"
         alt=""/> 
         <p>
-        The training of score models. Here we use BoxLift task as an example. The score model is targeted to predict the score of the input prompt for one specific task.
+        Performance vs. Token Length and Performance vs. Runtime.
         </p>     
     </div>
   </div>
@@ -300,7 +292,7 @@
         class="center-image"
         alt=""/> 
         <p>
-        The training of score models. Here we use BoxLift task as an example. The score model is targeted to predict the score of the input prompt for one specific task.
+        Example in BoxLift task why requiring LLMs to answer with code is not always effective.
         </p>     
     </div>
   </div>
@@ -313,7 +305,7 @@
         class="center-image"
         alt=""/> 
         <p>
-        The training of score models. Here we use BoxLift task as an example. The score model is targeted to predict the score of the input prompt for one specific task.
+        Example in Date Understanding task why requiring LLMs to answer with code is not always effective.
         </p>     
     </div>
   </div>
@@ -326,7 +318,7 @@
         class="center-image"
         alt=""/> 
         <p>
-        The training of score models. Here we use BoxLift task as an example. The score model is targeted to predict the score of the input prompt for one specific task.
+        Example in Game24 task why requiring LLMs to answer with code is not always effective.
         </p>     
     </div>
   </div>
@@ -337,14 +329,7 @@
     <h2 class="title">Related Links</h2>
     <div class="content has-text-justified">
       <p>
-        This paper presents work whose goal is to advance the field of Automatic Prompt Tuning. The focus topic on multi-step agent tasks will advance the research in Foundation Model based Intelligent Agents. This work is also part of a broader research thread around <emph>language-instructed task and motion planning</emph>, which allows us to transform from natural language instruction into robot control signals.
-      </p>
-      <p>
-        Other work on Large Language Models for automatic prompt optimization include:
-        <ul>
-          <li><a href="https://arxiv.org/pdf/2305.03495.pdf">Automatic Prompt Optimization with “Gradient Descent” and Beam Search (EMNLP'2023)</a>.</li>
-          <li><a href="https://arxiv.org/pdf/2211.01910.pdf?trk=public_post_comment-text">LARGE LANGUAGE MODELS ARE HUMAN-LEVEL PROMPT ENGINEERS (ICLR'2023)</a>.</li>
-        </ul>
+        This paper focuses on general Foundation Model based Intelligent Agents for virtual and real robots. This work is also part of a broader research thread around <emph>language-instructed task and motion planning</emph>, which allows us to transform from natural language instruction into robot control signals.
       </p>
       <p>
         Other work on Large Language Models to Robot Task and Motion Planning and LLM-based agents from our lab include:
@@ -352,6 +337,7 @@
           <li><a href="https://arxiv.org/pdf/2305.07766.pdf">NL2TL: Transforming Natural Languages to Temporal Logics using Large Language Models (EMNLP'2023)</a>.</li>
           <li><a href="https://arxiv.org/pdf/2306.06531.pdf">AutoTAMP: Autoregressive Task and Motion Planning with LLMs as Translators and Checkers (ICRA'2024)</a>.</li>
           <li><a href="https://arxiv.org/abs/2309.15943.pdf">Scalable Multi-Robot Collaboration with Large Language Models: Centralized or Decentralized Systems? (ICRA'2024)</a>.</li>
+          <li><a href="https://arxiv.org/pdf/2402.08702">PRompt Optimization in Multi-Step Tasks (PROMST): Integrating Human Feedback and Heuristic-based Sampling (EMNLP'2024)</a>.</li>
         </ul>
       </p>
     </div>
@@ -361,11 +347,14 @@
 <section class="section" id="BibTeX">
   <div class="container is-max-desktop content">
     <h2 class="title">BibTeX</h2>
-    <pre><code>@article{chen2024prompt,
-  title={Prompt optimization in multi-step tasks (promst): Integrating human feedback and preference alignment},
-  author={Chen, Yongchao and Arkin, Jacob and Hao, Yilun and Zhang, Yang and Roy, Nicholas and Fan, Chuchu},
-  journal={arXiv preprint arXiv:2402.08702},
-  year={2024}
+    <pre><code>@misc{chen2024steeringlargelanguagemodels,
+      title={Steering Large Language Models between Code Execution and Textual Reasoning}, 
+      author={Yongchao Chen and Harsh Jhamtani and Srinagesh Sharma and Chuchu Fan and Chi Wang},
+      year={2024},
+      eprint={2410.03524},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2410.03524}, 
 }
 </code></pre>
   </div>
